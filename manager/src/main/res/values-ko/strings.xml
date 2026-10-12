@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      The source strings. Translations are written in Crowdin and arrive as a pull request; see
+      docs/translations.md. Uploading this file is also what applies its settings over there, so
+      a change here reaches translators on the next push and not before.
+    -->
+    <!-- To translators: you can leave your here -->
+    <!-- Home - Adb -->
+    <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[무선 디버깅으로 시작]]></string>
+    <string name="home_wireless_adb_starting_without_wifi">Wi-Fi 없이 시작: 무선 디버깅이 켜진 상태로 유지될 때까지 기기에 계속해서 요청을 보냅니다. 시작되거나 포기할 때까지 최대 2분이 걸릴 수 있습니다.</string>
+    <string name="home_usb_adb_needs_network">USB로 시작하면 기존 ADB 포트를 사용하며, 이 포트를 다시 열려면 네트워크가 필요합니다. Wi-Fi에 한 번 연결하거나, 시작 방법을 <b>Wi-Fi 없이 시작</b>으로 선택해 무선 디버깅으로 다시 시작하세요.</string>
+    <string name="home_wireless_adb_summary">무선 디버깅을 사용해 시작합니다.</string>
+    <string name="home_usb_adb_title"><![CDATA[USB 디버깅으로 시작]]></string>
+    <string name="home_usb_adb_summary">USB 디버깅을 사용해 시작합니다.</string>
+    <string name="diagnostics_title">진단 정보</string>
+    <string name="diagnostics_copy">진단 정보 복사</string>
+    <string name="diagnostics_copied">진단 정보가 복사되었습니다</string>
+    <string name="diagnostics_service">서비스</string>
+    <string name="diagnostics_server_uid">서버 uid</string>
+    <string name="diagnostics_server_api">서버 API</string>
+    <string name="diagnostics_wireless_debugging">무선 디버깅</string>
+    <string name="diagnostics_adb_port">ADB 포트</string>
+    <string name="diagnostics_battery">배터리 최적화</string>
+    <string name="diagnostics_android">Android</string>
+    <string name="diagnostics_device">기기</string>
+    <string name="diagnostics_started_with">시작 방법</string>
+    <string name="diagnostics_default">기본 방법</string>
+    <string name="diagnostics_not_required">필요 없음</string>
+    <string name="diagnostics_connected">연결됨</string>
+    <!-- The platform says "not optimized" and Samsung says "unrestricted" for the same state,
+         and "Battery optimization: not optimized" reads as a fault to anyone holding the phone.
+         "unrestricted" says what the app did and what it is: left alone. -->
+    <string name="diagnostics_battery_unrestricted">제한 없음</string>
+    <string name="diagnostics_available">사용 가능</string>
+    <string name="diagnostics_unavailable">사용 불가</string>
+    <string name="diagnostics_closed">닫힘</string>
+    <!-- Adb -->
+    <string name="dialog_adb_port">포트 번호</string>
+    <string name="dialog_adb_invalid_port">포트 번호는 1에서 65535 사이의 정수입니다.</string>
+    <string name="adb_pairing">페어링</string>
+    <string name="dialog_adb_pairing_title">기기와 페어링</string>
+    <string name="dialog_adb_pairing_discovery">페어링 서비스 검색 중</string>
+    <string name="dialog_adb_pairing_paring_code">페어링 코드</string>
+    <string name="paring_code_is_wrong">페어링 코드가 올바르지 않습니다.</string>
+    <string name="cannot_connect_port">무선 디버깅 서비스에 연결할 수 없습니다.\n\nShizuku가 모든 방화벽, 광고 차단, VPN 또는
+        네트워크 접근 제한 관련 앱에서 화이트리스트에 등록되어 있는지 꼭 확인해 주세요.</string>
+    <string name="dialog_adb_pairing_message">다음 단계를 수행하여 페어링을 시작하세요.\n- \"개발자 옵션\"으로 이동합니다.\n-
+        \"USB 디버깅\" 및 \"무선 디버깅\"을 활성화합니다.\n- \"무선 디버깅\"의 왼쪽을 탭합니다.\n- \"페어링 코드로 장치 페어링\"을 탭합니다.\n-
+        알림에 페어링 코드를 입력합니다.</string>
+    <!-- Goes after dialog_adb_pairing_accessibility_enable in the same dialog: what the greyed-out
+         row means, and both ways to open it. The App info menu is the only one available on a
+         phone with no computer attached, the app-ops command is the same app-op written from
+         outside the app, and both are named because either reader may be the one holding it. -->
+    <string name="dialog_adb_pairing_open_app_info">앱 정보</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">다음 단계를 수행하여 페어링을 시작하세요.\n- \"개발자 옵션\"으로
+        이동합니다.\n- \"USB 디버깅\" 및 \"무선 디버깅\"을 활성화합니다.\n- \"무선 디버깅\"의 왼쪽을 탭합니다.\n- \"페어링 코드로 기기 페어링\"을
+        탭합니다. Shizuku가 자동으로 페어링 코드를 감지합니다.</string>
+    <string name="adb_pairing_requires_multi_window">먼저 화면 분할 (멀티 윈도우) 모드로 진입하세요.</string>
+    <string name="adb_pairing_requires_multi_window_reason">이 시스템은 페어링 대화 대화가 항상 보이도록 요구합니다. 분할 화면
+        모드를 사용하는 것만이 이 앱과 시스템 대화 대화를 동시에 볼 수 있는 방법입니다.</string>
+    <string name="adb_error_key_store">무선 디버깅용 키를 생성할 수 없습니다.\n이는 이 장치의 KeyStore 메커니즘이 고장 났기 때문일 수
+        있습니다.</string>
+    <string name="adb_error_stop_tcp">TCP를 통한 ADB를 중지하지 못했습니다.</string>
+    <string name="adb_pair_required">페어링 단계를 먼저 진행하세요.</string>
+    <string name="enable">할 수 있게 하다</string>
+    <string name="auto_pair_instructions">코드를 입력하지 않고 페어링하기:\n\n1. 개발자 옵션 → 무선 디버깅\n2. 페어링 코드로 기기 페어링\n\nShizuku가 해당 대화상자에서 코드와 포트를 직접 읽어와 스스로 시작합니다. 페어링이 끝날 때까지 대화상자를 열어 두세요.</string>
+    <string name="auto_pair_manual">수동</string>
+    <string name="development_settings">개발자 옵션</string>
+    <string name="notification_settings">알림 옵션</string>
+    <string name="adb_pairing_tutorial_content_notification">Shizuku의 알림이 페어링을 완료하는 데 도움이 될 수도 있습니다.</string>
+    <string name="adb_pairing_tutorial_content_steps">\"개발자 옵션\"으로 이동한 다음 \"USB 디버깅\"과 \"무선 디버깅\"을
+        활성화합니다.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">\"무선 디버깅\"의 왼쪽을 탭한 다음 \"페어링 코드로
+        기기 페어링\"을 탭합니다. 알림에 있는 코드를 입력하여 페어링을 완료합니다.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">페어링 프로세스에서는 Shizuku의 알림과 상호
+        작용해야 합니다. Shizuku가 알림을 게시하도록 허용하십시오.</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI 사용자는 시스템 설정의 \"알림\" - \"알림 창\"에서 알림 스타일을
+        \"Android\"로 전환해야 합니다.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">그렇지 않으면 알림에서 페어링 코드를 입력하지 못할 수도 있습니다.</string>
+    <string name="adb_pairing_tutorial_content_finish">시즈쿠에게 돌아가서 시즈쿠를 시작해.</string>
+    <string name="adb_pairing_tutorial_content_network">시즈쿠는 로컬 네트워크에 접속해야 해. 네트워크 권한으로 제어됩니다.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">일부 시스템(예: MIUI)은 앱이
+        포그라운드 서비스를 사용하더라도 보이지 않으면 네트워크에 접속하지 못하게 합니다. 해당 시스템에서는 시즈쿠의 배터리 최적화 기능을 비활성화해 주세요.</string>
+    <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[시작 (루팅된 기기용)]]></string>
+    <string name="home_root_description"><![CDATA[Magisk를 사용 중이라면 %1$s를 사용해 보세요. 루트 사용자의 경우, 이 명령은 Shizuku를 대체하게 됩니다. 참고: %2$s를 사용하려면 기존 애플리케이션을 약간 변경해야 합니다.]]></string>
+    <string name="home_root_button_start">시작</string>
+    <!-- Home - Application management -->
+    <plurals name="home_app_management_authorized_apps_count">
+        <item quantity="other"><![CDATA[%d개 앱 인증됨]]></item>
+    </plurals>
+    <!-- Home - Automation -->
+    <!-- Home - Stealth mode -->
+    <!-- Home - Learn more -->
+    <!-- Home - Adb permissions limited -->
+    <!-- Home - Dialogs -->
+    <string name="home_dialog_reboot_required_title">재부팅 필요</string>
+    <string name="home_dialog_reboot_required_message">Shizuku가 제대로 작동하려면 기기를 재부팅해야 합니다. 계속하려면 기기를 재부팅하세요.</string>
+    <string name="home_dialog_duplicate_app_detected_title">중복된 앱 발견됨</string>
+    <string name="home_dialog_duplicate_app_detected_message">이 앱의 다른 버전이 기기에 설치되어 있습니다. 계속하려면 중복된 버전을 모두 제거하고 기기를 재부팅하세요.</string>
+    <string name="home_dialog_button_exit">종료</string>
+    <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">ADB의 권한이 제한됨</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[기기 제조사에서 ADB의 권한을 제한하고 있을 가능성이 높습니다.<p><b><a href="%1$s">이 문서</a></b>에 시스템에 대한 해결 방안이 있을 수 있습니다.]]></string>
+    <string name="app_management_toggle_all">모두 전환</string>
+    <string name="app_management_search_hint">앱 검색</string>
+    <string name="app_management_sort">정렬</string>
+    <string name="apps_needs_shizuku">앱을 보려면 Shizuku를 시작하세요</string>
+    <string name="apps_empty">표시할 앱이 없습니다</string>
+    <string name="apps_filter_empty">이 필터에 해당하는 앱이 없습니다</string>
+    <string name="apps_filter_all">전체</string>
+    <string name="apps_filter_granted">허용됨</string>
+    <string name="apps_filter_revoked">거부됨</string>
+    <string name="apps_filter_hidden">숨김</string>
+    <string name="apps_no_match">검색 결과와 일치하는 앱이 없습니다</string>
+    <string name="app_management_sort_last_added">최근 추가순</string>
+    <string name="app_management_sort_updated">업데이트순</string>
+    <string name="app_management_sort_alphabetical">A-Z</string>
+    <string name="tab_home">홈</string>
+    <string name="tab_apps">앱</string>
+    <string name="tab_shell">셸</string>
+    <string name="tab_labs">실험실</string>
+    <string name="tab_firewall">방화벽</string>
+    <string name="tab_autostart">자동 시작</string>
+    <string name="labs_filter_allowed">허용됨</string>
+    <string name="labs_filter_blocked">차단됨</string>
+    <string name="labs_blocked_count">%1$d개 차단됨</string>
+    <!-- Hiding: what apps can read about this device -->
+    <string name="tab_hide_developer_options">개발자 옵션 숨기기</string>
+    <string name="tab_hide_usb_debugging">USB 디버깅 숨기기</string>
+    <string name="tab_hide_wireless_debugging">무선 디버깅 숨기기</string>
+    <string name="tab_hide_private_dns">프라이빗 DNS 숨기기</string>
+    <string name="tab_hide_vpn">VPN 숨기기</string>
+    <string name="hiding_gate">사용함</string>
+    <string name="hiding_gate_disabled">사용 안 함</string>
+    <string name="hiding_filter_hidden">숨김</string>
+    <string name="hiding_signal_developer_options">개발자 옵션</string>
+    <string name="hiding_signal_usb_debugging">USB 디버깅</string>
+    <string name="hiding_signal_wireless_debugging">무선 디버깅</string>
+    <string name="hiding_signal_private_dns">프라이빗 DNS</string>
+    <string name="hiding_signal_vpn">VPN</string>
+    <string name="hiding_vpn_client">숨길 VPN 클라이언트</string>
+    <string name="tab_force_dark">다크 모드 강제 적용</string>
+    <string name="force_dark_gate">다크 모드 강제 적용</string>
+    <string name="force_dark_gate_disabled">다크 모드 강제 적용이 꺼져 있습니다</string>
+    <string name="force_dark_count">%1$d개 적용됨</string>
+    <string name="force_dark_filter_forced">적용됨</string>
+    <string name="force_dark_filter_not">적용 안 됨</string>
+    <string name="force_dark_empty">다크 모드가 강제 적용된 앱이 없습니다.</string>
+    <string name="force_dark_toggled">앱을 강제로 종료했습니다</string>
+    <string name="force_dark_notification_title">다크 모드 강제 적용이 켜져 있습니다</string>
+    <string name="force_dark_notification_text">다크 모드 강제 적용 목록에 있는 앱이 열려 있습니다</string>
+    <string name="force_dark_notification_watching">목록에 있는 앱이 열리길 기다리는 중</string>
+    <string name="tab_activities">액티비티 런처</string>
+    <string name="activities_apps_count">앱 %1$d개</string>
+    <string name="activities_count">액티비티 %1$d개</string>
+    <string name="activities_launcher">런처</string>
+    <string name="activities_exported">내보내짐</string>
+    <string name="activities_not_exported">내보내지지 않음</string>
+    <string name="activities_empty">이 앱은 선언된 액티비티가 없습니다.</string>
+    <string name="activities_needs_shizuku">Shizuku가 실행 중이 아닙니다. 앱이 외부에 공개하지 않은 액티비티는 Shizuku만 실행할 수 있습니다.</string>
+    <string name="activities_refused">액티비티를 시작할 수 없습니다.</string>
+    <string name="activities_detail_package">패키지</string>
+    <string name="activities_detail_activity">액티비티</string>
+    <string name="activities_detail_state">상태</string>
+    <string name="activities_open">열기</string>
+    <string name="activities_copy">복사</string>
+    <string name="activities_edit_as_intent">인텐트로 편집</string>
+    <string name="activities_copied">복사됨</string>
+    <string name="tab_intent_builder">인텐트 빌더</string>
+    <string name="intent_uri">인텐트 URI</string>
+    <string name="intent_uri_load">필드로 불러오기</string>
+    <string name="intent_uri_invalid">올바른 인텐트 URI가 아닙니다.</string>
+    <string name="intent_action">액션</string>
+    <string name="intent_data">데이터</string>
+    <string name="intent_type">타입</string>
+    <string name="intent_component">컴포넌트</string>
+    <string name="intent_package">패키지</string>
+    <string name="intent_categories">카테고리</string>
+    <string name="intent_operation_activity">액티비티 시작</string>
+    <string name="intent_operation_broadcast">브로드캐스트 전송</string>
+    <string name="intent_choose_activity">액티비티 선택</string>
+    <string name="intent_key">키</string>
+    <string name="intent_value">값</string>
+    <string name="intent_flags">플래그</string>
+    <string name="intent_start">시작</string>
+    <string name="intent_nothing">인텐트에 액션, 데이터, 패키지, 컴포넌트 중 하나를 지정하세요.</string>
+    <string name="intent_refused">인텐트를 시작할 수 없습니다.</string>
+    <string name="intent_flag_new_document">새 문서</string>
+    <string name="intent_flag_no_animation">애니메이션 없음</string>
+    <string name="device_voltage">전압</string>
+    <string name="device_current">전류</string>
+    <string name="device_current_average">평균 전류</string>
+    <string name="device_charge_counter">전하량</string>
+    <string name="device_technology">기술</string>
+    <string name="device_health">건강 상태</string>
+    <string name="device_charging">충전 중</string>
+    <string name="device_charged">충전 완료</string>
+    <string name="device_health_section">건강 상태</string>
+    <string name="device_bsoh">배터리 효율</string>
+    <string name="device_cycles">충전 사이클</string>
+    <string name="device_asoc">충전 상태</string>
+    <string name="device_first_use">최초 사용일</string>
+    <string name="device_max_temp">기록된 최고 온도</string>
+    <string name="device_max_current">최고 전류</string>
+    <string name="device_health_source">삼성은 이 정보를 배터리 서비스 데이터에 저장하며, 배터리 덤프에도 출력합니다. Android API에는 포함되지 않은 정보이므로 다른 제조사의 기기에서는 제공되지 않을 수 있습니다.</string>
+    <string name="device_usage">사용 시간</string>
+    <string name="device_screen_on">화면 켜짐 시간</string>
+    <string name="device_time_on_battery">배터리 사용 시간</string>
+    <string name="device_screen_off">화면 꺼짐 시간</string>
+    <string name="device_usage_note">플랫폼 자체가 관리하는 카운터입니다. 배터리가 완전히 충전될 때마다 초기화되므로, 한 시간 전에 충전한 기기는 여기에 몇 초로 표시되고 하루 종일 충전기에서 분리되어 있던 기기는 몇 시간으로 표시됩니다.</string>
+    <string name="device_max_charging_current">최대 충전 전류</string>
+    <string name="device_max_charging_voltage">최대 충전 전압</string>
+    <string name="device_capacity_rated">정격</string>
+    <string name="device_capacity_typical">일반</string>
+    <string name="device_capacity">용량</string>
+    <string name="device_capacity_estimated">추정</string>
+    <string name="device_capacity_learned">최근 학습값</string>
+    <string name="device_capacity_range">학습된 범위</string>
+    <string name="device_capacity_note">플랫폼은 설계 용량을 알려주지 않으며, 이 기기는 셸에서도 연료 게이지 접근을 거부하므로 완충 대비 퍼센트를 정확히 계산할 수 없습니다. 위 수치는 시스템이 학습한 값입니다.</string>
+    <string name="device_history">기록</string>
+    <string name="device_history_level">배터리 잔량</string>
+    <string name="device_history_temperature">온도</string>
+    <string name="device_system">시스템</string>
+    <string name="device_model">모델</string>
+    <string name="device_android">Android</string>
+    <string name="device_kernel">커널</string>
+    <string name="device_abi">아키텍처</string>
+    <string name="device_cores">CPU 코어 수</string>
+    <string name="device_uptime">가동 시간</string>
+    <string name="device_memory">메모리</string>
+    <string name="device_storage">저장 공간</string>
+    <string name="device_shizuku">Shizuku</string>
+    <string name="device_server">서버</string>
+    <string name="device_start_method">시작 방법</string>
+    <string name="device_transport">전송 방식</string>
+    <string name="device_watchdog">지키는 개</string>
+    <string name="device_app_in_front">포그라운드 앱</string>
+    <string name="log_filter_all">전체</string>
+    <string name="log_capture_start">시작</string>
+    <string name="log_capture_choose_hint">앱 검색</string>
+    <string name="action_start">시작</string>
+    <string name="intents_start">시작</string>
+    <!-- Terminal -->
+    <string name="terminal_tutorial_miui">사용자들은 MIUI가 내보내기 기능에서 사용되는 Storage Access Framework를
+        손상시킨다고 보고했습니다.</string>
+    <string name="terminal_tutorial_miui_2">MIUI를 사용하는 경우 Shizuku APK의 assets 폴더에서 파일을 추출해야 할 수도
+        있습니다.</string>
+    <string name="terminal_tutorial_1">파일을 새 폴더로 내보냅니다.</string>
+    <string name="terminal_tutorial_1_description">%1$s 및 %2$s두 개의 파일이 내보내집니다. 선택한 폴더에 해당 파일이 이미 있는
+        경우 삭제됩니다.</string>
+    <string name="terminal_tutorial_2">터미널 앱을 사용하여 파일을 개인 파일 디렉토리에 복사합니다.</string>
+    <string name="terminal_tutorial_2_description">팁: 터미널 앱의 홈 디렉토리(~)가 개인 파일 디렉토리에 있는 경우, 해당 디렉토리에
+        파일을 두면 경로를 쓰지 않고도 %1$s 을 실행할 수 있습니다.\n\n그렇지 않은 경우, 터미널 앱의 %3$s 구성 파일에서 %2$s 에 대한 별칭을 만들 수
+        있습니다.</string>
+    <string name="terminal_tutorial_3">다음 명령으로 셸을 엽니다.</string>
+    <!-- Stealth -->
+    <!-- Settings -->
+    <string name="settings_start_on_boot">부팅 시 시작</string>
+    <string name="settings_watchdog">지키는 개</string>
+    <string name="settings_watchdog_summary">Shizuku가 충돌하면 자동으로 다시 시작합니다.</string>
+    <!-- One wording for every switch that is nothing but a settings write, so they all say the
+         same thing about the permission the write needs. -->
+    <string name="settings_tcp_mode">TCP 모드</string>
+    <string name="settings_tcp_mode_summary">"Shizuku가 Wi-Fi 없이 재시작할 수 있도록 합니다. (Shizuku는 재부팅 후 한 번
+        시작되어야 합니다.)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP 포트가 즉시 닫힙니다. TCP 모드를 다시 켜려면 Wi-Fi에 연결해야
+        합니다. 계속하시겠습니까?"</string>
+    <string name="settings_restart_dialog_title">재시작 필요</string>
+    <string name="settings_restart_dialog_message">시즈쿠는 이 설정을 적용하려면 다시 시작해야 합니다.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>와이파이가 필수입니다. 시즈쿠는 계속 달리면서 와이파이 연결이 될 때까지 기다렸다가 백그라운드에서 다시 시작할 것이다.</b>]]></string>
+    <string name="settings_tcp_port">TCP 포트</string>
+    <string name="settings_language">언어</string>
+    <string name="settings_black_night_theme">검은 테마</string>
+    <string name="settings_black_night_theme_summary">어두운 테마가 사용될 때 검은 테마를 사용</string>
+    <string name="settings_help">돕다</string>
+    <string name="settings_report_bug">버그 신고</string>
+    <!--
+      A plural, not a plain string: most of the people on this wall are here for a single commit,
+      so the singular is read more often than the plural is.
+    -->
+    <!-- Which part of the project a contributor's commits touched, shown as a badge. -->
+    <string name="contributor_area_server">서버</string>
+    <!--
+      A contributor's summary is composed from what the credits generator found - the areas they
+      worked in, and the languages they translated into. There is deliberately no string per
+      person: a new contributor is described the moment the generator sees them, and %1$s/%2$s are
+      filled with the area names above and with language names the platform already localises.
+    -->
+    <string name="settings_legacy_pairing">레거시 페어링</string>
+    <string name="settings_legacy_pairing_summary">알림 대신 대화 상자에 페어링 코드를 입력하세요.</string>
+    <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">먼저 다음 사항을 수행해 주십시오.</string>
+    <string name="bug_report_dialog_update">^1을 사용하고 있는지 확인하세요.</string>
+    <string name="bug_report_dialog_link_update">최신 버전</string>
+    <string name="bug_report_dialog_wiki">^1을 읽고 관련된 모든 문제 해결 단계를 따르십시오.</string>
+    <string name="bug_report_dialog_link_wiki">위키</string>
+    <string name="bug_report_dialog_issues">버그가 이미 보고되었는지 확인하려면 ^1을 모두 검색해 보세요.</string>
+    <string name="bug_report_dialog_link_issues">기존 문제</string>
+    <string name="bug_report_dialog_method">계정이 있으시면 ^1에 이슈를 제출해 주세요.</string>
+    <string name="bug_report_dialog_method_2">아니면 이메일을 보내셔도 됩니다.</string>
+    <string name="bug_report_dialog_button_email">이메일</string>
+    <!-- Snackbar -->
+    <string name="snackbar_battery_optimization_settings">이 기능을 사용하려면 배터리 최적화를 비활성화하세요.</string>
+    <string name="snackbar_action_fix">고치다</string>
+    <!-- Updates -->
+    <!-- Toast -->
+    <string name="toast_no_email_app">이메일 앱을 찾을 수 없습니다</string>
+    <string name="toast_pairing_timeout">시즈쿠 페어링 서비스가 시간 초과되었다.</string>
+    <!-- Dark Mode Setting Override -->
+    <string name="dark_theme_off">항상 가볍다</string>
+    <string name="dark_theme_on">항상 어둡다</string>
+    <!-- About -->
+    <!-- Start/Stop -->
+    <string name="start">시작</string>
+    <!-- Notification -->
+    <string name="notification_channel_adb_pairing">무선 디버깅 페어링</string>
+    <string name="notification_adb_pairing_input_paring_code">페어링 코드 입력</string>
+    <string name="notification_adb_pairing_searching_for_service_title">페어링 서비스 검색 중</string>
+    <string name="notification_adb_pairing_service_found_title">페어링 서비스를 찾았습니다</string>
+    <string name="notification_adb_pairing_stop_searching">검색 중지</string>
+    <string name="notification_adb_pairing_working_title">페어링 진행 중</string>
+    <string name="notification_adb_pairing_succeed_title">페어링 성공</string>
+    <string name="notification_adb_pairing_succeed_text">지금 Shizuku 서비스를 시작할 수 있습니다.</string>
+    <string name="notification_adb_pairing_failed_title">페어링 실패</string>
+    <string name="notification_adb_pairing_retry">재시도</string>
+    <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">Shizuku에 접근</string>
+    <string name="permission_description">앱이 Shizuku를 사용하도록 허용합니다.</string>
+    <string name="permission_warning_template"><![CDATA[<b>%1$s</b>을(를) %2$s에 허용하시겠습니까\?]]></string>
+    <string name="grant_dialog_button_allow_always">항상 허용</string>
+    <string name="grant_dialog_button_deny">"거부"</string>
+    <!-- Starter -->
+    <string name="starter">실행기</string>
+    <string name="start_with_root_failed">루트 권한이 부여되지 않았거나 이 기기가 루팅되지 않아서 서비스를 시작할 수 없습니다.</string>
+    <!-- WADB Starter -->
+    <string name="wadb_notification_title">시즈쿠 시작…</string>
+    <string name="wadb_notification_wifi_required">진행하기 전에 Wi-Fi 연결을 기다리는 중</string>
+    <string name="wadb_notification_retry">재시도 대기 중</string>
+    <string name="wadb_error_title">부팅 시 시작 중 오류 발생</string>
+    <string name="wadb_error_notify_dev">개발자에게 알리려면 탭하세요.</string>
+    <string name="wadb_permission_error_notification_title">권한 오류</string>
+    <string name="wadb_permission_error_notification_content">Shizuku를 부팅 시 시작하려면
+        WRITE_SECURE_SETTINGS 권한이 필요합니다. 탭하여 권한을 부여하는 방법을 알아보세요.</string>
+    <!-- Shell -->
+    <string name="shell_title">셸</string>
+    <!-- Watchdog -->
+    <string name="watchdog_running">워치독이 실행 중입니다</string>
+    <string name="watchdog_turn_off">끄세요</string>
+    <string name="watchdog_shizuku_crashed_title">시즈쿠는 최근에 추락했습니다</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog이 서비스를 다시 시작했습니다. 향후 충돌을 방지하기 위한 잠재적인 수정
+        사항을 알아보려면 탭하세요.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">알림 끄기</string>
+    <string name="watchdog_given_up_action_start">시작</string>
+    <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">브라우저를 실행할 수 없음</string>
+    <string name="toast_copied_to_clipboard">클립보드에 복사됨</string>
+    <string name="accessibility_service_description">알림이나 분할 화면을 사용할 수 없는 기기(예: Android 14 이상을 실행하는
+        TV)에 대한 페어링 지원을 제공합니다.\n\nShizuku가 무선 디버깅 페어링 화면에서 페어링 코드를 추출할 수 있도록 합니다. 페어링 코드를 찾으면
+        Shizuku가 자동으로 비활성화됩니다.</string>
+    <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">%1$s는 최신 Shizuku를 지원하지 않음</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[구형 Shizuku는 2019년 3월에 지원이 중단되었습니다. 또한, 구형 Shizuku는 새로운 안드로이드 시스템에서 동작하지 않습니다.<p><b>%1$s</b> 개발자에게 업데이트를 문의하세요.]]></string>
+    <string name="dialog_requesting_legacy_title">%1$s가 구형 Shizuku를 요청하고 있음</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b>가 최신 Shizuku를 지원하지만, 구형 Shizuku를 요청하고 있습니다. Shizuku가 실행 중이지 않아서 발생할 수 있으니 Shizuku 앱에서 확인하세요.<p>구형 Shizuku는 2019년 3월 부터 지원이 중단되었습니다.]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">Shizuku 열기</string>
+    <string name="wadb_notification_attempt_now">재시도</string>
+    <!-- Manage tab -->
+    <string name="manage_search_hint">앱 검색</string>
+    <string name="manage_filter_all">전체</string>
+    <string name="manage_filter_hidden">숨김</string>
+    <string name="permissions_action_deny">거부</string>
+    <string name="manage_status_hidden">숨김</string>
+    <!-- One app, and what it may do on the device -->
+    <string name="app_op_mode_deny">거부</string>
+    <string name="app_action_enable">할 수 있게 하다</string>
+    <string name="app_info_updated">업데이트순</string>
+    <string name="files_root_app_data">데이터</string>
+    <string name="files_sort">정렬</string>
+    <string name="install_location_auto">개발자 옵션</string>
+</resources>

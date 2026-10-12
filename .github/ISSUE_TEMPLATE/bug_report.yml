@@ -1,0 +1,86 @@
+name: Bug Report
+description: Report a bug of Shizuku
+labels: bug
+
+body:
+  - type: checkboxes
+    id: before_you_begin
+    attributes:
+      label: Before You Begin
+      options:
+        - label: I am reporting an issue with Shizuku itself, NOT an issue about compatibility with another app
+          required: true
+        - label: I read the [wiki](https://github.com/thedjchi/Shizuku/wiki#troubleshooting) (the upstream wiki it documents the behaviour this fork inherits) and followed all relevant troubleshooting steps
+          required: true
+        - label: I searched through all [issues](https://github.com/rushiranpise/Shizuku-Next/issues) and confirmed that this is a new bug
+          required: true
+        - label: I am using the latest version of Shizuku
+          required: true
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Requirements
+      options:
+        - label: Shizuku is not running in a virtual environment or broken ROM (e.g., GrapheneOS)
+          required: true
+        - label: Xposed is not installed/enabled for Shizuku
+          required: true  
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - adb
+        - root
+        - manual
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Shizuku Version
+    validations:
+      required: true 
+
+  - type: input
+    id: android_version
+    attributes:
+      label: Android Version
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Issue Description
+      description: Please upload any relevant logs and/or screenshots
+
+  # The app's own record of every start, and the only one that exists when the server is not
+  # up: it is written by the process that starts the server, which runs as the shell or root,
+  # so it survives the case the app itself has nothing to read. A report about a start that
+  # fails - or one that comes up and then dies - cannot be answered without it, so it is asked
+  # for in a field of its own rather than left to "any relevant logs".
+  - type: textarea
+    id: starter_log
+    attributes:
+      label: Launch log
+      description: >-
+        What each start did is in Android/data/moe.shizuku.privileged.api/files/starter.log,
+        falling back to Android/media/moe.shizuku.privileged.api/starter.log. Paste it here, or
+        drag the file into this box. If the manager itself crashed, `adb logcat -b crash -d` is
+        the other half of the story.
+
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Steps To Reproduce
